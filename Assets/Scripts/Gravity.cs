@@ -16,16 +16,14 @@ public class Gravity : MonoBehaviour {
 		
 		Rigidbody[] rigidBodies = FindObjectsOfType(typeof(Rigidbody)) as Rigidbody[];
 
-
-
 		foreach (Rigidbody body in rigidBodies) {
 			if (transform.position == body.transform.position) continue;
-			print (body);
+			//print (body);
 			Vector3 bodyDistance = transform.position - body.transform.position;
 
 			float force = gravity*gravityFactor * (rigidbody.mass * body.rigidbody.mass)/(bodyDistance.magnitude * bodyDistance.magnitude);
-			print(force);
-			body.rigidbody.AddForce(bodyDistance.normalized * force * Time.fixedDeltaTime);
+			//print(force);
+			body.rigidbody.AddForce(bodyDistance.normalized * force);
 		}
 	}
 }

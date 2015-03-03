@@ -15,12 +15,17 @@ public class SimulationSpeed : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			Time.timeScale = 2 * Time.timeScale;
 			updateTimeScaleText();
+			if (Time.timeScale <= 1){
+				Time.fixedDeltaTime = 0.02F * Time.timeScale;
+			}
 		}
 		if (Input.GetButtonDown ("Fire2")) {
 			Time.timeScale = Time.timeScale/2;
 			updateTimeScaleText();
+			if (Time.timeScale <= 1){
+				Time.fixedDeltaTime = 0.02F * Time.timeScale;
+			}
 		}
-		//Time.fixedDeltaTime = 0.02F * Time.timeScale;
 	}
 
 	void updateTimeScaleText (){

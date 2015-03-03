@@ -8,8 +8,9 @@ public class InitialSpeed : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rigidbody.AddForce(Vector3.forward*direction * initialForce);
+		rigidbody.AddForce(Vector3.forward*direction * initialForce, ForceMode.Impulse);
 	}
 	
+
 
 }

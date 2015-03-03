@@ -13,6 +13,12 @@
 /*.pidb
 /*.booproj
 
+# User Defined
+/*.dll
+/*.exe
+Solar_Data/
+moon_Data/
+
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
 
